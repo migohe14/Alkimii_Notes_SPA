@@ -1,7 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<div class="container">
-<h1>Notes</h1>
+<div>
+<div id="new-note">
+<%= link_to 'New Note', new_note_path, remote: true, :class => "btn btn-secondary mb-5" %>
+</div>
+<br>
 <table id="notes" class="table">
   <thead>
     <tr>
@@ -14,8 +17,4 @@
     <%= render @notes %>
   </tbody>
 </table>
-<br>
-<div id="new-note">
-<%= link_to 'New Note', new_note_path, remote: true %>
-</div>
 </div>

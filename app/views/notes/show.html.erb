@@ -1,11 +1,14 @@
-<div class="container">
-<p id="notice"><%= notice %></p>
+<div class="mt-5 mb-5">
+  <div class="alert alert-success" role="alert">
+    <p id="notice"><%= notice %></p>
+  </div>
+  <p>
+    <strong>Title:</strong>
+    <%= @note.title %>
+  </p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @note.title %>
-</p>
-
-<%= link_to 'Edit', edit_note_path(@note) %> |
-<%= link_to 'Back', notes_path %>
+  <div>
+    <%= link_to 'Edit', edit_note_path(@note), :class => "btn btn-primary" %>
+    <%= link_to 'Back', notes_path, :class => "btn btn-light" %>
+  </div>
 </div>
