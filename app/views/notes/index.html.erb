@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+<h1>Notes</h1>
+<table id="notes" class="table">
+  <thead>
+    <tr>
+      <th scope="col">Title</th>
+      <th scope="col" colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <%= render @notes %>
+  </tbody>
+</table>
+<br>
+<div id="new-note">
+<%= link_to 'New Note', new_note_path, remote: true %>
+</div>
+</div>
